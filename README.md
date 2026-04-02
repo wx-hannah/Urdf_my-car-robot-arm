@@ -16,16 +16,18 @@ rm -rf build devel
 2. 删掉刚才生成错位置的软链接
 rm src/CMakeLists.txt
 
-3. 正确初始化工作空间（在根目录执行！）
+rm CMakeLists.txt
+
+4. 正确初始化工作空间（在根目录执行！）
 catkin_init_workspace
 
-4. 编译
+5. 编译
 catkin_make
 
-# 启动 Gazebo 仿真环境：
+# 1、启动自己机器人 Gazebo 仿真环境：
 roslaunch wx_robot_description gazebo.launch
 
-# 1、自己的机器人 urdf启动和xarco启动
+#  自己的机器人 urdf启动和xarco启动
 roslaunch wx_robot_description display.launch
 
 roslaunch wx_robot_description display_xacro.launch
